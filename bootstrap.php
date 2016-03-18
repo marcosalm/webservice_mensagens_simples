@@ -1,4 +1,10 @@
 <?php
+/**
+ * Created by PhpStorm.
+ * User: Marcos
+ * Date: 17/03/2016
+ * Time: 03:40
+ */
 
 session_start();
 
@@ -8,10 +14,6 @@ ini_set('display_errors', 1);
 require_once __DIR__ . '/doctrine-bootstrap.php';
 
 $app = new \API\Application\App(array('debug' => true));
-
-$app->register(new Silex\Provider\TwigServiceProvider(), array(
-    'twig.path' => __DIR__.'/src/JRP/Views/',
-));
 
 $app->register(new \Silex\Provider\UrlGeneratorServiceProvider());
 
