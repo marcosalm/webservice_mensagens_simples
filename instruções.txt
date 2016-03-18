@@ -1,0 +1,27 @@
+usar php 5.6.+
+
+Criar uma base de dados configurando no arquivo "doctrine-bootstrap.php" com os dados de connection do banco de dados;
+
+Na pasta raiz do projeto rodar o comando via prompt/terminal : bin\doctrine orm:schema-tool:create
+
+use um programa de gerenciamento de tráfego de dados de sua referência (postman é uma boa opção).
+
+Gerenciamento de mensagens.
+
+GET - /api/messages -> Lista todas as mensagens
+GET - /api/messages/id -> Lista uma mensagem de determinado ID
+GET - /api/messages/tags/id -> Lista mensagens por tag ID
+POST - /api/messages -> Insere uma mensagem no banco de dados (message,tag)
+Obs: "tag" é um array que pode conter uma string, assim criando uma nova inserção de tag, ou int com o valor do id de uma tag já existente(Ex: ["nova tag",4]).
+
+Atenção: O separador decimal é vírgula.
+PUT - /api/messages -> Altera uma determinada mensagem no banco de dados (id)
+DELETE - /api/messages/id -> Deleta um mensagem de determinado ID
+
+Gerenciamento de Tags:
+
+GET - /api/tags -> Lista todas as tags.
+GET - /api/tags/id -> Lista uma tag de determinado ID.
+POST - /api/tags -> Insere uma tag no banco de dados (nome).
+PUT - /api/tags -> Atualiza uma tag no banco de dados (id, nome).
+DELETE - /api/tags/id -> Deleta uma tag de determinado ID.
